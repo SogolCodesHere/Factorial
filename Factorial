@@ -1,0 +1,23 @@
+int factorial(int fact) //1. negative numbers: no factorial 
+						//2. 0 & 1 : fact = 1
+						//3. positive numbers:
+{
+	
+	if (fact < 0) {
+		printf("There is no factorial for negative numbers. \n");
+		return -1; //shows error in C
+	}
+
+	else if ((fact == 0) || (fact == 1)) {
+		return 1;
+	}
+
+	else {
+		int result = 1; 
+		for (int i = fact; i > 1; i--) {
+			result *= i;
+		}
+		return result;
+	}
+
+}
